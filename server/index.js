@@ -12,8 +12,10 @@ app.use(serveStatic(path.join(__dirname, "../client")))
 
 io.on('connection', (socket) => {
     console.log('a user connected')
-    socket.on("chat message", (msg) => {
+    socket.on("user_msg", (msg) => {
         console.log("message from the user: ", msg)
+        socket.emit("server_msg", msg)
+        socket.broadcast.emit("server_msg", msg)
     })
     socket.on("disconnect", () => {
         console.log("user disconnected")
