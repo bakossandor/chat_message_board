@@ -8,10 +8,12 @@ const app = express()
 const server = http.Server(app)
 const io = socketIO(server)
 
+const users = []
+
 app.use(serveStatic(path.join(__dirname, "../client")))
 
 io.on('connection', (socket) => {
-    console.log('a user connected')
+    console.log('an user connected')
     socket.on("user_msg", (msg) => {
         console.log("message from the user: ", msg)
         socket.emit("server_msg", msg)
@@ -19,6 +21,15 @@ io.on('connection', (socket) => {
     })
     socket.on("disconnect", () => {
         console.log("user disconnected")
+    })
+    socket.on("receive_username", (username, cbFn) => {
+        if (users.indexOf(username) === -1) {
+            users.push(username)
+            console.log("connected usernames: ", users)
+            cbFn(true)
+        } else {
+            cbFn(false)
+        }
     })
 });
 
