@@ -7,11 +7,11 @@ html, body {
 	background: transparent;
 }
 
-.jumbotron {
+.jumbotron{
 	height: 25rem;
 }
 
-.message-s {
+.message-s, .mb-content {
 	height: 100%;
 	overflow-y: scroll;
 }
@@ -25,4 +25,12 @@ html, body {
 	margin: 0;
 	word-break: break-all;
 	overflow-wrap: break-word;
+}
+
+.mb-outer {
+	height: 30rem;
+}
+
+.mb-content p {
+	margin: 0
 }

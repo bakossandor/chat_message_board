@@ -31,15 +31,13 @@
 			<div class="tab-pane fade show active" id="nav-chat" role="tabpanel" aria-labelledby="nav-chat-tab">
 				<div class="container">
 					<div class="input">
-						<form>
-							<div class="input-group mt-3">
-								<input id="chat-input" type="text" class="form-control" placeholder="type message" aria-label="chat message"
-								 aria-describedby="button-addon">
-								<div class="input-group-append">
-									<button class="btn btn-outline-secondary" type="button" id="button-addon">Send</button>
-								</div>
+						<div class="input-group mt-3">
+							<input id="chat-input" type="text" class="form-control" placeholder="type message" aria-label="chat message"
+								aria-describedby="button-addon">
+							<div class="input-group-append">
+								<button class="btn btn-outline-secondary" type="button" id="button-addon">Send</button>
 							</div>
-						</form>
+						</div>
 					</div>
 					<div class="chatBoard">
 						<div class="jumbotron mt-3">
@@ -55,12 +53,28 @@
 				</div>
 			</div>
 
-
 			<!-- message board -->
 			<!------------------->
 			<div class="tab-pane fade" id="nav-mb" role="tabpanel" aria-labelledby="nav-mb-tab">
-				<div class="container">
-					
+				<div class="container mb-outer">
+					<div>
+						<div>
+							<h2>Send Message to the message board</h2>
+						</div>
+						<div class="input">
+							<div class="input-group mt-3">
+								<input id="mb-input" type="text" class="form-control" placeholder="type message" aria-label="mb message"
+									aria-describedby="mb">
+								<div class="input-group-append">
+									<button class="btn btn-outline-secondary" type="button" id="mb-button">Send</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<hr>
+					<div class="mb-content">
+
+					</div>
 				</div>
 			</div>
 		</div>
@@ -70,15 +84,13 @@
 		 aria-hidden="true" data-backdrop="static">
 			<div class="modal-dialog modal-sm">
 				<div class="modal-content p-3 model-to-append">
-					<form>
-						<div class="input-group">
-							<input id="user-name" type="text" class="form-control" placeholder="type your username" aria-label="username"
-							 aria-describedby="button-username">
-							<div class="input-group-append">
-								<button class="btn btn-outline-secondary" type="button" id="button-username" data-toggle="tooltip" data-html="true" title="You have to add username">Send</button>
-							</div>
+					<div class="input-group">
+						<input id="user-name" type="text" class="form-control" placeholder="type your username" aria-label="username"
+							aria-describedby="button-username">
+						<div class="input-group-append">
+							<button class="btn btn-outline-secondary" type="button" id="button-username" data-toggle="tooltip" data-html="true" title="You have to add username">Send</button>
 						</div>
-					</form>
+					</div>
 				</div>
 			</div>
 		</div>
