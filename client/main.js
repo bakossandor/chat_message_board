@@ -25,7 +25,6 @@ $("document").ready(() => {
     })
 
     socket.on("server_mb_msg", (arr) => {
-        console.log(arr)
         arr.forEach(element => {
             $(".mb-content").prepend(
                 `<p><span class="bg-info text-light">${element.username}</span> | <span class="bg-light">${element.date}</span> | <span class="text-secondary">${element.message}</span></p>`
